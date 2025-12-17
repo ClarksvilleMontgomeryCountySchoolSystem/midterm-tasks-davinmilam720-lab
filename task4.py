@@ -3,7 +3,7 @@
 
 # Snippet 1:
 books = 12
-if books > 10
+if books > 10:
     print("You have a lot of books!")
 
 
@@ -22,7 +22,7 @@ print(f"Total pets: {total_pets}")
 # Snippet 4:
 is_sunny = True
 if is_sunny:
-message = "Wear sunglasses"
+    message = "Wear sunglasses"
     print(message)
 
 
@@ -30,12 +30,12 @@ message = "Wear sunglasses"
 distance = 50
 time = 2
 speed = distance // time
-print(f"Speed: {speed} mph"
+print(f"Speed: {speed} mph")
 
 
 # Snippet 6:
 level = 5
-if level = 5:
+if level:
     print("You reached level 5!")
 
 
@@ -48,17 +48,17 @@ print(f"Area: {area}")
 
 # Snippet 8:
 name = "Sarah"
-print "Hello", name
+print("Hello", name)
 
 
 # Snippet 9:
 hungry = False
 if hungry:
     print("Time to eat!")
-    else:
+else:
     print("Not hungry yet")
 
 
 # Snippet 10:
 age = 15
-print(f"I am {age} years old)
+print(f"I am {age} years old")
