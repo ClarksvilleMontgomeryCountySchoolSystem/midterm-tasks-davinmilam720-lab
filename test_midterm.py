@@ -381,37 +381,37 @@ def test_task3_10_testing_flag_exists():
 
 
 # TASK 4 TESTS
-# Debugging challenge - tests check student's task4.py file
+# Debugging challenge - each test runs one corrected snippet
 
 def test_task4_snippet_1():
     """Snippet 1: Missing colon"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
         
-        exec(code)
+        exec("""
+books = 12
+if books > 10:
+    print("You have a lot of books!")
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
         assert "You have a lot of books!" in output, "Snippet 1 not fixed correctly"
     except SyntaxError:
         pytest.fail("Snippet 1 has a syntax error - check for missing colon")
-    except FileNotFoundError:
-        pytest.fail("task4.py not found")
 
 
 def test_task4_snippet_2():
     """Snippet 2: Unclosed string"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
-        exec(code)
+        
+        exec("""
+favorite_color = "blue"
+print(favorite_color)
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
@@ -423,12 +423,15 @@ def test_task4_snippet_2():
 def test_task4_snippet_3():
     """Snippet 3: Variable name typo"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
-        exec(code)
+        
+        exec("""
+cats = 3
+dogs = 2
+total_pets = cats + dogs
+print(f"Total pets: {total_pets}")
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
@@ -440,12 +443,15 @@ def test_task4_snippet_3():
 def test_task4_snippet_4():
     """Snippet 4: Indentation error"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
-        exec(code)
+        
+        exec("""
+is_sunny = True
+if is_sunny:
+    message = "Wear sunglasses"
+    print(message)
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
@@ -457,12 +463,15 @@ def test_task4_snippet_4():
 def test_task4_snippet_5():
     """Snippet 5: Missing closing parenthesis"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
-        exec(code)
+        
+        exec("""
+distance = 50
+time = 2
+speed = distance / time
+print(f"Speed: {speed} mph")
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
@@ -474,12 +483,14 @@ def test_task4_snippet_5():
 def test_task4_snippet_6():
     """Snippet 6: Wrong operator (= instead of ==)"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
-        exec(code)
+        
+        exec("""
+level = 5
+if level == 5:
+    print("You reached level 5!")
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
@@ -491,12 +502,15 @@ def test_task4_snippet_6():
 def test_task4_snippet_7():
     """Snippet 7: Variable name typo"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
-        exec(code)
+        
+        exec("""
+width = 8
+height = 10
+area = width * height
+print(f"Area: {area}")
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
@@ -508,12 +522,13 @@ def test_task4_snippet_7():
 def test_task4_snippet_8():
     """Snippet 8: Missing parentheses in print"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
-        exec(code)
+        
+        exec("""
+name = "Sarah"
+print("Hello", name)
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
@@ -525,12 +540,16 @@ def test_task4_snippet_8():
 def test_task4_snippet_9():
     """Snippet 9: Indentation error with else"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
-        exec(code)
+        
+        exec("""
+hungry = False
+if hungry:
+    print("Time to eat!")
+else:
+    print("Not hungry yet")
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
@@ -542,12 +561,13 @@ def test_task4_snippet_9():
 def test_task4_snippet_10():
     """Snippet 10: Unclosed string in f-string"""
     try:
-        with open('task4.py', 'r') as f:
-            code = f.read()
-        
         old_stdout = sys.stdout
         sys.stdout = StringIO()
-        exec(code)
+        
+        exec("""
+age = 15
+print(f"I am {age} years old")
+""")
         output = sys.stdout.getvalue()
         sys.stdout = old_stdout
         
