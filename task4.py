@@ -20,9 +20,9 @@ print(f"Total pets: {total_pets}")
 
 
 # Snippet 4:
-is_sunny = True
+is_sunny = False
 if is_sunny:
-    message = "Wear sunglasses"
+    message = "Don't wear sunglasses"
     print(message)
 
 
