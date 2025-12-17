@@ -1,3 +1,6 @@
+# Debugging Challenge - Fix the bugs in each code block
+# Each block is independent and can be fixed separately
+
 # Snippet 1:
 books = 12
 if books > 10:
@@ -19,7 +22,7 @@ print(f"Total pets: {total_pets}")
 # Snippet 4:
 is_sunny = True
 if is_sunny:
-    message = "wear sunglasses"
+    message = "Wear sunglasses"
     print(message)
 
 
